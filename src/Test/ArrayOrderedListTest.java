@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Created by LazEness on 10/12/2016.
  */
-public class ArrayOrderedListTest {
+public class ArrayOrderedListTest<E extends Comparable>{
     public ArrayOrderedList<User> list = new ArrayOrderedList<User>();
     @Test
     public void add() throws Exception {

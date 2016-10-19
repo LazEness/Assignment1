@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Created by LazEness on 10/12/2016.
  */
-public class ArrayIndexedListTest implements Iterator {
+ public class ArrayIndexedListTest<E extends Comparable> implements Iterator {
     ArrayIndexedList<User> list = new ArrayIndexedList<User>();
     @Test
     public void add() throws Exception {

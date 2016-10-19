@@ -9,11 +9,11 @@ public class ArrayIndexedList<E extends Comparable> implements ListInterface <E>
     private final int SIZE = 100;
     private int end = 0;
     private E[] list;
-
+    @SuppressWarnings({"unchecked"})
     public ArrayIndexedList() {
         list = (E[]) new Object[SIZE];
     }
-
+    @SuppressWarnings({"unchecked"})
     public ArrayIndexedList(int capacity) {
         list = (E[]) (new Object[capacity]);
     }
@@ -26,7 +26,7 @@ public class ArrayIndexedList<E extends Comparable> implements ListInterface <E>
         end++;
 
     }
-
+    @SuppressWarnings({"unchecked"})
     @Override
     public E remove(E element) throws EmptyListException {
         E removed = element;
@@ -55,11 +55,16 @@ public class ArrayIndexedList<E extends Comparable> implements ListInterface <E>
         return end == 0;
     }
 
+
+    public E get(int i) {
+        return list[i];
+    }
+
     @Override
     public int size() {
         return end;
     }
-
+    @SuppressWarnings({"unchecked"})
     private void expandCapacity(){
         E[] larger = (E[])(new Object[list.length*2]);
 

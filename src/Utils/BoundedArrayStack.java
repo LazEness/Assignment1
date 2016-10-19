@@ -10,11 +10,12 @@ public class BoundedArrayStack<E> implements BoundedStackInterface<E> {
     private final int SIZE = 100;
     private int size = 0 ;
     private int capacity = 0;
-
+    @SuppressWarnings({"unchecked"})
     public BoundedArrayStack(){
         this.capacity = SIZE;
         element = (E[])(new Object[SIZE]);
     }
+    @SuppressWarnings({"unchecked"})
     public BoundedArrayStack(int size){
         this.capacity = size;
         element = (E[])(new Object[capacity]);

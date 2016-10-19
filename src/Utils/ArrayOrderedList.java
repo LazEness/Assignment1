@@ -12,14 +12,15 @@ public class ArrayOrderedList <E extends Comparable> implements ListInterface<E>
     private final int SIZE = 100;
     private int end = 0;
     private E[] list;
+    @SuppressWarnings({"unchecked"})
     public ArrayOrderedList() {
         list = (E[]) new Object[SIZE];
     }
-
+    @SuppressWarnings({"unchecked"})
     public ArrayOrderedList(int capacity) {
         list = (E[]) (new Object[capacity]);
     }
-
+    @SuppressWarnings({"unchecked"})
     @Override
     public void add(E element) {
         if (size() == list.length)
@@ -38,7 +39,7 @@ public class ArrayOrderedList <E extends Comparable> implements ListInterface<E>
         end++;
     }
 
-
+    @SuppressWarnings({"unchecked"})
     @Override
     public E remove(E element) throws EmptyListException {
         E removed = element;
@@ -71,6 +72,7 @@ public class ArrayOrderedList <E extends Comparable> implements ListInterface<E>
     public int size() {
         return end;
     }
+    @SuppressWarnings({"unchecked"})
     private void expandCapacity()
     {
         E[] larger = (E[])(new Object[list.length*2]);

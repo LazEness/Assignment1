@@ -9,9 +9,11 @@ public class ArrayStack<E> implements StackInterface<E>{
     private int cap = 100;
     int size = 0;
     private E[] list;
+    @SuppressWarnings({"unchecked"})
     public ArrayStack(){
         list = (E[]) new Object[cap];
     }
+    @SuppressWarnings({"unchecked"})
     public ArrayStack(int capacity){
         this.cap = capacity;
         list = (E[]) new Object[capacity];
@@ -51,6 +53,7 @@ public class ArrayStack<E> implements StackInterface<E>{
     public int size() {
         return size;
     }
+    @SuppressWarnings({"unchecked"})
     private void enlarge(){
             E[] larger = (E[])(new Object[list.length*2]);
 

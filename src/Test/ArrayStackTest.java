@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * Created by LazEness on 10/12/2016.
  */
-public class ArrayStackTest {
+public class ArrayStackTest<E extends Comparable> {
     public ArrayStack<User> list = new ArrayStack<User>();
     @Test
     public void push() throws Exception {

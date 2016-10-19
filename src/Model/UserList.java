@@ -1,12 +1,12 @@
 package Model;
-import Utils.LinkedListOrdered;
+import Utils.ArrayIndexedList;
 
-public class UserList extends LinkedListOrdered {
-    private static LinkedListOrdered<User> users = new LinkedListOrdered<>();
-    public static LinkedListOrdered <User> getUsers(){
+public class UserList extends ArrayIndexedList {
+    private static ArrayIndexedList<User> users = new ArrayIndexedList<>();
+    public static ArrayIndexedList <User> getUsers(){
         return users;
     }
-    public static void setUsers(LinkedListOrdered<User> users){
+    public static void setUsers(ArrayIndexedList<User> users){
         UserList.users = users;
     }
 }

@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Created by LazEness on 10/12/2016.
  */
-public class ArrayQueueTest {
+public class ArrayQueueTest<E extends Comparable> {
     public ArrayQueue<User> list = new ArrayQueue<User>();
     @Test
     public void enqueue() throws Exception {

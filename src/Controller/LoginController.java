@@ -22,15 +22,16 @@ public class LoginController {
     @FXML
     PasswordField password;
 
-    public void authenticate(MouseEvent mouseEvent) throws Exception{
-
-            if(userName.getText().equals(UserList.getUsers().get(i).getUserName()) && password.getText().equals(UserList.getUsers().get(i).getPassword())){
+    public void authenticate(MouseEvent mouseEvent) throws Exception {
+        for (int i = 0; i < UserList.getUsers().size(); i++) {
+            if (userName.getText().equals(UserList.getUsers().get(i).getUserName()) && password.getText().equals(UserList.getUsers().get(i).getPassword())) {
                 Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
                 stage.close();
                 openWelcomeView();
 
             }
         }
+    }
 
 
     public void openCreateAccountView() throws Exception {

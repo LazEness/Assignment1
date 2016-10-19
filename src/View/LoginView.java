@@ -3,6 +3,7 @@ package View;
 import Model.User;
 import Model.UserIO;
 import Model.UserList;
+import Utils.ArrayIndexedList;
 import Utils.LinkedListOrdered;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LoginView extends Application {
-    LinkedListOrdered<User> list = new LinkedListOrdered<User>();
+    ArrayIndexedList<User> list = new ArrayIndexedList<User>();
     @Override
     public void start(Stage primaryStage) throws Exception{
         loadListUsers();
@@ -25,7 +26,7 @@ public class LoginView extends Application {
     }
     public void loadListUsers(){
         try {
-            UserList.setUsers((LinkedListOrdered<User>)UserIO.readUsers());
+            UserList.setUsers((ArrayIndexedList<User>)UserIO.readUsers());
         }catch(IOException e){
             System.err.print("Error Loading User.dat file");
         }catch(ClassNotFoundException e){
